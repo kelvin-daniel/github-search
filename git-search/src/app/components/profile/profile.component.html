@@ -1,9 +1,12 @@
+<form action="" class="">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search User"[(ngModel)]='username' name='username' (keyup)='findProfile()'>
+    </div>
+</form>
 <div *ngIf='profile'>
     <div class='card'>
-        <div class="card-heading">
-            <div>
-                <h3>{{profile.name}} <p>{{profile.login}}</p> <span>{{profile.location}}</span></h3>
-            </div>
+        <div class="card-heading bg-dark text-white p-2">
+            {{profile.name}} <small>({{profile.login}})</small><span>{{profile.location}}</span>
         </div>
         <div class="card-body">
             <div class="row">
