@@ -35,12 +35,12 @@
                                 <h3 class="card-title">Repositories</h3>
                             </div>
                             <div class="card-body" *ngFor='let repo of repos'>
-                                <div class="">
-                                    <h5>
-                                        {{repo.name}} <a href="{{repo.html_url}}" target="_blank"><span class="btn btn-info float-right">Open</span></a>
-                                    </h5>
+                                <h5><span  class="badge badge-secondary">{{repo.name}} <a href="{{repo.html_url}}" target="_blank"></a></span>
+                                <span class="btn btn-info float-right">Open</span>
+                                </h5>
+                                <div class="card mt-4" *ng>
+                                    <p>{{repo.description}}</p>
                                 </div>
-                                <p>{{repo.description}}</p>
                             </div>
                         </div>
                     </div>
