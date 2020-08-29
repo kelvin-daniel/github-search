@@ -1,9 +1,11 @@
 <div *ngIf='profile'>
-    <div class='panel panel-default'>
-        <div class="panel-heading">
-            {{profile.name}} <small>{{profile.login}}</small> <span>{{profile.location}}</span>
+    <div class='card'>
+        <div class="card-heading">
+            <div>
+                <h3>{{profile.name}} <p>{{profile.login}}</p> <span>{{profile.location}}</span></h3>
+            </div>
         </div>
-        <div class="panel-body">
+        <div class="card-body">
             <div class="row">
                 <div class="col-sm-3">
                     <img src="{{profile.avatar_url}}" class="rounded-circle img-fluid" alt="profile">
@@ -28,13 +30,13 @@
                         <p>
                             <a href="{{profile.html_url}}" target="_blank" class="btn btn-success" >view profile on github</a>
                         </p>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Repositories</h3>
+                        <div class="card">
+                            <div class="card-heading">
+                                <h3 class="card-title">Repositories</h3>
                             </div>
-                            <div class="panel-body" *ngFor='let repo of repos'>
+                            <div class="card-body" *ngFor='let repo of repos'>
                                 <p>
-                                    {{repo.name}} <a href="{{repo.html_url}}">Expand</a>
+                                    {{repo.name}} <a href="{{repo.html_url}}" target="_blank"><span class="btn btn-info">Expand</span></a>
                                 </p>
                             </div>
                         </div>
