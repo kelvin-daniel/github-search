@@ -3,5 +3,34 @@
         <div class="panel-heading">
             {{profile.name}} <small>{{profile.login}}</small> <span>{{profile.location}}</span>
         </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="{{profile.avatar_url}}" class="rounded-circle img-fluid" alt="profile">
+                </div>
+                <div class="col-sm-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+                        <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
+                        <li class="list-group-item" *ngIf="profile.blog"> <a href="{{profile.blog}}" target="
+                            _blank"></a>{{profile.blog}} </li>
+                        <li class="list-group-item" *ngIf="profile.email"> <a href="{{profile.email}}" target="_blank">{{profile.email}}</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        <p>
+                            <span class="btn btn-info mt-1 btn-sm">{{profile.followers}} Followers</span>&nbsp;
+                            <span class="btn btn-info mt-1 btn-sm" >Following {{profile.following}}</span>&nbsp;
+                            <span class="btn btn-warning mt-1">{{profile.public_gists}} Public Gists</span>&nbsp;
+                            <span class="btn btn-primary mt-1">{{profile.public_repos}} Public Repositiries</span>&nbsp;
+                        </p>
+                        <p>
+                            <a href="{{profile.html_url}}" target="_blank" class="btn btn-success" >view profile on github</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div> 
 </div>
