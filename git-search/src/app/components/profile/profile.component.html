@@ -19,7 +19,7 @@
                         <li class="list-group-item" *ngIf="profile.email"> <a href="{{profile.email}}" target="_blank">{{profile.email}}</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4" style="width: 18rem;">
                     <div>
                         <p>
                             <span class="btn btn-info mt-1 btn-sm">{{profile.followers}} Followers</span>&nbsp;
@@ -35,10 +35,10 @@
                                 <h3 class="card-title">Repositories</h3>
                             </div>
                             <div class="card-body" *ngFor='let repo of repos'>
-                                <h5><span  class="badge badge-secondary">{{repo.name}} <a href="{{repo.html_url}}" target="_blank"></a></span>
+                                <h5 class="clearfix"><span  class="badge badge-secondary">{{repo.name}} <a href="{{repo.html_url}}" target="_blank"></a></span>
                                 <span class="btn btn-info float-right">Open</span>
                                 </h5>
-                                <div class="card mt-4" *ng>
+                                <div class="card mt-4">
                                     <p>{{repo.description}}</p>
                                 </div>
                             </div>
