@@ -38,8 +38,8 @@
                                 <h3 class="card-title">Repositories</h3>
                             </div>
                             <div class="card-body" *ngFor='let repo of repos'>
-                                <h5 class="clearfix"><span  class="badge badge-secondary">{{repo.name}} <a href="{{repo.html_url}}" target="_blank"></a></span>
-                                <span class="btn btn-info float-right">Open</span>
+                                <h5 class="clearfix"><span  class="badge badge-secondary">{{repo.name}}</span>
+                                <span class="btn btn-info float-right"><a href="{{repo.html_url}}" target="_blank" class="text-white" style="text-decoration:none;">Open</a></span>
                                 </h5>
                                 <div class="card mt-4">
                                     <p>{{repo.description}}</p>
