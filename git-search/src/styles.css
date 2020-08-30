@@ -6,9 +6,19 @@
     .reps{
         width: 100%;
     }
+    #description{
+        box-shadow: 0 0 15px rgb(92, 88, 88);
+        padding-left: 10px;
+    }
+    .col{
+        width: 100%;
+    }
 }
 @media (min-width: 720px) {
     .reps{
         width: 100%;
+    }
+    .col{
+        width: 80%;
     }
 }

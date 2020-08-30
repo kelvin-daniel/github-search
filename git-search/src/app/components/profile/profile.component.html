@@ -10,10 +10,8 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-sm-3 col-md-2">
-                    <img src="{{profile.avatar_url}}" class="rounded-circle img-fluid" alt="profile">
-                </div>
-                <div class="col-sm-5 col-md-4">
+                <div id="description" class="col-sm-5 m-2 col-md-4 bg-dark">
+                    <img src="{{profile.avatar_url}}" class="rounded-circle p-3 img-fluid" alt="profile">
                     <ul class="list-group">
                         <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
                         <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
@@ -21,8 +19,11 @@
                             _blank"></a>{{profile.blog}} </li>
                         <li class="list-group-item" *ngIf="profile.email"> <a href="{{profile.email}}" target="_blank">{{profile.email}}</a></li>
                     </ul>
+                    <p>
+                        <a href="{{profile.html_url}}" target="_blank" class="btn btn-success mt-2 font-weight-bolder" >view profile on github</a>
+                    </p>
                 </div>
-                <div class="col-sm-4 col-md-4" style="width: 18rem;">
+                <div class="col" style="width: 18rem;">
                     <div>
                         <p>
                             <span class="btn btn-info font-weight-bolder mt-1 btn-sm">{{profile.followers}} Followers</span>&nbsp;
@@ -30,12 +31,10 @@
                             <span class="btn font-weight-bolder btn-warning mt-1 btn-sm">{{profile.public_gists}} Public Gists</span>&nbsp;
                             <span class="btn font-weight-bolder btn-primary mt-1 btn-sm">{{profile.public_repos}} Public Repositiries</span>&nbsp;
                         </p>
-                        <p>
-                            <a href="{{profile.html_url}}" target="_blank" class="btn btn-success" >view profile on github</a>
-                        </p>
-                        <div class="card-body container-lg reps">
+                        <hr>
+                        <div class="card-body border-left container-lg reps">
                             <div class="card-heading">
-                                <h3 class="card-title">Repositories</h3>
+                                <h3 class="card-title font-weight-bolder">Repositories</h3>
                             </div>
                             <div class="card-body" *ngFor='let repo of repos'>
                                 <h5 class="clearfix"><span  class="badge badge-secondary">{{repo.name}}</span>
