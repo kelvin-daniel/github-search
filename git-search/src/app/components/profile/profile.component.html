@@ -10,7 +10,7 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-md-2">
                     <img src="{{profile.avatar_url}}" class="rounded-circle img-fluid" alt="profile">
                 </div>
                 <div class="col-sm-5 col-md-4">
@@ -25,15 +25,15 @@
                 <div class="col-sm-4 col-md-4" style="width: 18rem;">
                     <div>
                         <p>
-                            <span class="btn btn-info mt-1 btn-sm">{{profile.followers}} Followers</span>&nbsp;
-                            <span class="btn btn-info mt-1 btn-sm" >Following {{profile.following}}</span>&nbsp;
-                            <span class="btn btn-warning mt-1">{{profile.public_gists}} Public Gists</span>&nbsp;
-                            <span class="btn btn-primary mt-1">{{profile.public_repos}} Public Repositiries</span>&nbsp;
+                            <span class="btn btn-info font-weight-bolder mt-1 btn-sm">{{profile.followers}} Followers</span>&nbsp;
+                            <span class="btn font-weight-bolder btn-info mt-1 btn-sm" >Following {{profile.following}}</span>&nbsp;
+                            <span class="btn font-weight-bolder btn-warning mt-1 btn-sm">{{profile.public_gists}} Public Gists</span>&nbsp;
+                            <span class="btn font-weight-bolder btn-primary mt-1 btn-sm">{{profile.public_repos}} Public Repositiries</span>&nbsp;
                         </p>
                         <p>
                             <a href="{{profile.html_url}}" target="_blank" class="btn btn-success" >view profile on github</a>
                         </p>
-                        <div class="card">
+                        <div class="card-body container-lg reps">
                             <div class="card-heading">
                                 <h3 class="card-title">Repositories</h3>
                             </div>
@@ -41,7 +41,7 @@
                                 <h5 class="clearfix"><span  class="badge badge-secondary">{{repo.name}}</span>
                                 <span class="btn btn-info float-right"><a href="{{repo.html_url}}" target="_blank" class="text-white" style="text-decoration:none;">Open</a></span>
                                 </h5>
-                                <div class="card mt-4">
+                                <div class="card mt-4 p-1">
                                     <p>{{repo.description}}</p>
                                 </div>
                             </div>
