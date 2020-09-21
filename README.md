@@ -79,7 +79,7 @@ You are set to go.
 
 ## Deployment
 
-Click [here](https://kelvin-daniel.github.io/github-search/) to go to the live site.<br>
+Click [here](https://kelvin-daniel.github.io/gitsearch/) to go to the live site.<br>
 
 ## Built With
 
