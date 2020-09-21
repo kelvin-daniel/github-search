@@ -8,7 +8,6 @@ export class ProfileService {
 
     private username:string;
     private clientid='84c1e6c7734ac7f567f3';
-    private clientsecret = '2c29f0d4677bd9e3490b748416925264e2d6fd2a';
 
   constructor(private http: HttpClient) {
     console.log("service ready!");
@@ -17,11 +16,11 @@ export class ProfileService {
 // http://api.github.com/users/kelvin-daniel
 
    getProfileInfo(){
-     return this.http.get("http://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret" + this.clientsecret);
+     return this.http.get("http://api.github.com/users/" + this.username + "?client_id=" + this.clientid );
    }
 
    getProfileRepos(){
-    return this.http.get("http://api.github.com/users/" + this.username + "/repos?client_id=" + this.clientid + "&client_secret=" + this.clientsecret);
+    return this.http.get("http://api.github.com/users/" + this.username + "/repos?client_id=" + this.clientid );
    } 
 
    updateProfile(username:string){
